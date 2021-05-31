@@ -36,48 +36,56 @@ namespace FhirApp
             id.Value = "juan.tapia";
             pat.Identifier.Add(id);
 
-            var name = new HumanName().WithGiven("Juan").WithGiven("Adrián").AndFamily("Tapia");
-            name.Prefix = new string[] { "Sr." };
+            var name = new HumanName().WithGiven("Juan").AndFamily("Tapia");
+            name.Prefix = new string[] { "MR" };
             name.Use = HumanName.NameUse.Official;
 
-            var nickname = new HumanName();
-            nickname.Use = HumanName.NameUse.Nickname;
-            nickname.GivenElement.Add(new FhirString("Juan"));
+            //var nickname = new HumanName();
+            //nickname.Use = HumanName.NameUse.Nickname;
+            //nickname.GivenElement.Add(new FhirString("Juan"));
 
             pat.Name.Add(name);
-            pat.Name.Add(nickname);
+            //pat.Name.Add(nickname);
 
             pat.Gender = AdministrativeGender.Male;
 
             pat.BirthDate = "1972-10-01";
 
-            var birthplace = new Extension();
-            birthplace.Url = "http://hl7.org/fhir/StructureDefinition/birthPlace";
-            birthplace.Value = new Address() { City = "Jujuy" };
-            pat.Extension.Add(birthplace);
+            var contactPoint = new ContactPoint();
+            contactPoint.System = ContactPoint.ContactPointSystem.Phone;
+            contactPoint.Use = ContactPoint.ContactPointUse.Home;
+            contactPoint.Value = " (03) 5555 6789";
 
-            var birthtime = new Extension("http://hl7.org/fhir/StructureDefinition/patient-birthTime",
-                                           new FhirDateTime(1972, 10, 1, 4, 0));
-            pat.BirthDateElement.Extension.Add(birthtime);
+            pat.Telecom.Add(contactPoint);
+
+            //var birthplace = new Extension();
+            //birthplace.Url = "http://hl7.org/fhir/StructureDefinition/birthPlace";
+            //birthplace.Value = new Address() { City = "Jujuy" };
+            //pat.Extension.Add(birthplace);
+
+            //var birthtime = new Extension("http://hl7.org/fhir/StructureDefinition/patient-birthTime",
+            //                               new FhirDateTime(1972, 10, 1, 4, 0));
+            //pat.BirthDateElement.Extension.Add(birthtime);
 
             var address = new Address()
             {
-                Line = new string[] { "Hipolito Yrigoyen 2569" },
-                City = "Balvanera",
-                State = "CABA",
-                PostalCode = "1090",
-                Country = "ARG"
+                Line = new string[] { "3300 Washtenaw" },
+                City = "Ann Harbor",
+                State = "MI",
+                PostalCode = "48104",
+                Country = "US",
+                District= "Washtenaw"
             };
             pat.Address.Add(address);
 
-            var contact = new Patient.ContactComponent();
-            contact.Name = new HumanName();
-            contact.Name.Given = new string[] { "Alicia" };
-            contact.Name.Family = "Duro";
-            contact.Gender = AdministrativeGender.Female;
-            contact.Relationship.Add(new CodeableConcept("http://hl7.org/fhir/v2/0131", "N"));
-            contact.Telecom.Add(new ContactPoint(ContactPoint.ContactPointSystem.Phone, null, ""));
-            pat.Contact.Add(contact);
+            //var contact = new Patient.ContactComponent();
+            //contact.Name = new HumanName();
+            //contact.Name.Given = new string[] { "Alicia" };
+            //contact.Name.Family = "Duro";
+            //contact.Gender = AdministrativeGender.Female;
+            //contact.Relationship.Add(new CodeableConcept("http://hl7.org/fhir/v2/0131", "N"));
+            //contact.Telecom.Add(new ContactPoint(ContactPoint.ContactPointSystem.Phone, null, ""));
+            //pat.Contact.Add(contact);
 
             pat.Deceased = new FhirBoolean(false);
             return pat;
@@ -94,12 +102,18 @@ namespace FhirApp
                 PreferredReturn = Prefer.ReturnMinimal
             };
 
-            var client = new FhirClient("http://vonk.furore.com", settings);
+            var client = new FhirClient("http://fhir.hl7fundamentals.org/r4/");
+            
+            //var client = new FhirClient("http://hapi.fhir.org/baseR4");
             
             //var client = new Hl7.Fhir.Rest.FhirClient("http://server.fire.ly", settings);
             //http://test.fhir.org/r4/
             return client;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
