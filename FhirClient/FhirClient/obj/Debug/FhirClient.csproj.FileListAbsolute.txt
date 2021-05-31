@@ -1,6 +1,6 @@
-C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\bin\Debug\FhirClient.exe.config
-C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\bin\Debug\FhirClient.exe
-C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\bin\Debug\FhirClient.pdb
+C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\bin\Debug\FhirClientApp.exe.config
+C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\bin\Debug\FhirClientApp.exe
+C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\bin\Debug\FhirClientApp.pdb
 C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\bin\Debug\Hl7.Fhir.ElementModel.dll
 C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\bin\Debug\Hl7.Fhir.R4.Core.dll
 C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\bin\Debug\Hl7.Fhir.Serialization.dll
@@ -17,10 +17,11 @@ C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\bin\Debug\Hl7.Fhir.Su
 C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\bin\Debug\Hl7.FhirPath.xml
 C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\bin\Debug\Newtonsoft.Json.xml
 C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\bin\Debug\System.ValueTuple.xml
-C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\obj\Debug\FhirClient.csprojAssemblyReference.cache
-C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\obj\Debug\FhirClient.Properties.Resources.resources
+C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\obj\Debug\FhirClient.csproj.AssemblyReference.cache
+C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\obj\Debug\FhirClientApp.Form1.resources
+C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\obj\Debug\FhirClientApp.Properties.Resources.resources
 C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\obj\Debug\FhirClient.csproj.GenerateResource.cache
 C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\obj\Debug\FhirClient.csproj.CoreCompileInputs.cache
 C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\obj\Debug\FhirClient.csproj.CopyComplete
-C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\obj\Debug\FhirClient.exe
-C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\obj\Debug\FhirClient.pdb
+C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\obj\Debug\FhirClientApp.exe
+C:\Prototipos\FHIR\CursoFundamentals\FhirClient\FhirClient\obj\Debug\FhirClientApp.pdb

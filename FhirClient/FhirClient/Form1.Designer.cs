@@ -1,5 +1,5 @@
 ﻿
-namespace FhirClient
+namespace FhirClientApp
 {
     partial class Form1
     {

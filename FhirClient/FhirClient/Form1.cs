@@ -11,7 +11,7 @@ using Hl7.Fhir.Model;
 using Hl7.Fhir.Rest;
 
 
-namespace FhirClient
+namespace FhirClientApp
 {
     public partial class Form1 : Form
     {
@@ -21,6 +21,16 @@ namespace FhirClient
         }
 
         private void buttonPatient_Click(object sender, EventArgs e)
+        {
+            var pat = CreatePatient();
+            var client = CreateFhirClient();
+
+            var created_pat = client.Create(pat);
+
+        }
+
+
+        private Patient CreatePatient()
         {
             var pat = new Patient();
 
@@ -73,10 +83,25 @@ namespace FhirClient
             pat.Contact.Add(contact);
 
             pat.Deceased = new FhirBoolean(false);
-
-            var client = new FhirClient("http://server.fire.ly");
-
-
+            return pat;
         }
+
+        private Hl7.Fhir.Rest.FhirClient CreateFhirClient()
+        {
+
+            var settings = new FhirClientSettings
+            {
+                Timeout = 0,
+                PreferredFormat = ResourceFormat.Json,
+                VerifyFhirVersion = true,
+                PreferredReturn = Prefer.ReturnMinimal
+            };
+
+            var client = new Hl7.Fhir.Rest.FhirClient("/http://test.fhir.org/r4/", settings);
+            //var client = new Hl7.Fhir.Rest.FhirClient("http://server.fire.ly", settings);
+            //http://test.fhir.org/r4/
+            return client;
+        }
+
     }
 }
