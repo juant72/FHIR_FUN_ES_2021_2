@@ -1,0 +1,17 @@
+Query #1 - ID asignado por el servidor
+http://fhir.hl7fundamentals.org/r4/Patient?_id=283886
+
+Query #2 - Patient Identifier value (recuerde que aqui era su usuario de curso)
+http://fhir.hl7fundamentals.org/r4/Patient?identifier=http://hl7.org/fhir/sid/us-ssn|juan.tapia
+
+Query #3 - Patient Family Name
+http://fhir.hl7fundamentals.org/r4/Patient?gender=male&family=tapia
+
+Query #4 - Patient Gender and Given Name (los dos en la misma consulta)
+http://fhir.hl7fundamentals.org/r4/Patient?gender=male&given=Juan
+http://fhir.hl7fundamentals.org/r4/Patient?gender=male&given=Juan&family=Tapia
+
+Query #5 – OTRO que a usted le parezca. (No puede repetir consultas anteriores)
+Fecha de Nacimiento
+http://fhir.hl7fundamentals.org/r4/Patient?birthdate=1972-10-01
+
