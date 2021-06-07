@@ -1,0 +1,39 @@
+<Observation xmlns="http://hl7.org/fhir"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml"> UW Device for Pat # [YOUR PATIENT ID] 
+            [DESCRIPTION]: [VALUE][UNIT] on [DATE]
+        </div>
+    </text>
+    <identifier>
+        <system value="www.uwearme.com/measures"/>
+        <value value="[YOUR PATIENT ID]-[DATE]-[LOINC_CODE]"/>
+        
+    </identifier>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="[LOINC_CODE]"/>
+            <display value="[DESCRIPTION]"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"> </reference>
+        
+    </subject>
+    <effectiveDateTime value="[DATE]"/>
+    
+    <valueQuantity>
+        <value value="[VALUE]"/>
+        <unit value="[UNIT]"/>
+    </valueQuantity>
+    
+    <device>
+        <reference value="urn:uuid:01ba878a-e49d-4bac-b629-9de3fcb7e83a"> </reference>
+    </device>
+    
+</Observation>
+

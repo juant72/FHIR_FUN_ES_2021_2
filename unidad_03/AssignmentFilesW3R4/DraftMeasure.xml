@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by your engineer just before leaving the company
+        Left some good clues, though
+-->
+<Bundle xmlns="http://hl7.org/fhir"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <type value="transaction"> </type>
+    <entry>
+        <fullUrl value ="urn:uuid:17C7D86E-664F-4FE2-91D7-AF9A8E47311E"/>
+        <resource>
+            <Organization>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> UWEARME - A DIVISION OF HEALTH GIZMOS
+                        CORP </div>
+                </text>
+                <identifier>
+                    <system value="www.nationalorgidentifier.gov/ids"/>
+                    <value value="UWEARME"/>
+
+                </identifier>
+                <name value="UWEARME"/>
+                <address>
+                    <line value="2000 WEARABLE DRIVE"/>
+                    <city value="ANN ARBOR"/>
+                    <state value="MI"/>
+                    <country value="US"/>
+              </address>
+            </Organization>
+        </resource>
+        <request>
+            <method value="PUT"/>
+            <url value="Organization?identifier=www.nationalorgidentifier.gov/ids|UWEARME"/>
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"/>
+        
+        <resource>
+            <Patient>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> 
+                        [YOUR NAME] Id # [YOUR PATIENT ID] 
+                    </div>
+
+                </text>
+                <identifier>
+                    <system value="www.mypatientidentifier.com/ids"/>
+                    <value value="[YOUR PATIENT ID]"/>
+                </identifier>
+                <name>
+                    <family value="[YOUR LAST]"/>
+                    <given value="[YOUR FIRST]"/>
+                </name>
+                <address>
+                    <line value="[YOUR ADDRESS]"/>
+                    <city value="[YOUR CITY]"/>
+                    <state value="[YOUR STATE]"/>
+                    <country value="[YOUR COUNTRY]"/>
+                </address>
+                <managingOrganization>
+                    <reference value="urn:uuid:17C7D86E-664F-4FE2-91D7-AF9A8E47311E"
+                    > </reference>
+                </managingOrganization>
+            </Patient>
+
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+         <!-- Device goes here -->
+        </resource>
+        <request>
+            <method value="PUT"/>
+            <url value="Device?identifier=www.uwearme.com/dev|[YOUR PATIENT ID]"/>
+        </request>
+
+    </entry>
+
+    <entry>
+        <resource>
+            <!-- Observation goes here -->
+            
+        </resource>
+        
+    </entry>
+    <!-- And more observations here: SYS BP, DIA BP, HEART RATE, RESP RATE -->
+
+</Bundle>
