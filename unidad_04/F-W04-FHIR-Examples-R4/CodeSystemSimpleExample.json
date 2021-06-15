@@ -1,0 +1,59 @@
+{
+  "resourceType": "CodeSystem",
+  "name": "Berzerkistan PPH Tax Situation - 20151120",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "url": "http://fhir.hl7fundamentals.org/berzerkistan/CodeSystem/PatientTaxSituation",
+  "version": "2",
+  "status": "draft",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://bhm.org.bz/fhir"
+        }
+      ],
+      "name": "Professor Allan Karim Von Mannenheim"
+    }
+  ],
+  "description": "Code System PPH Table Berzerkistan PPH Patient Tax Situation",
+  "compositional": false,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "U",
+      "display": "Uncovered",
+      "definition": "Patient pays 21%"
+    },
+    {
+      "code": "V",
+      "display": "Voluntary",
+      "definition": "Patient pays 10.5%"
+    },
+    {
+      "code": "M",
+      "display": "Mandated",
+      "definition": "Patient pays 0%"
+    }
+  ],
+  "count": 4,
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Berzerkistan PPH Tax Situation - 20151120</h2><tt>http://fhir.hl7fundamentals.org/berzerkistan/CodeSystem/PatientTaxSituation</tt><p>Code System PPH Table Berzerkistan PPH Patient Tax Situation</p></div>"
+  },
+  "valueSet": "http://fhir.hl7fundamentals.org/berzerkistan/CodeSystem/PatientTaxSituation",
+  "caseSensitive": false,
+  "versionNeeded": false,
+  "identifier": {
+    "value": "PatientTaxSituation",
+    "system": "http://fhir.hl7fundamentals.org/berzerkistan/identifiers/codesystems"
+  },
+  "date": "2015-11-20",
+  "publisher": "Berzerkistan Healthcare Ministry",
+  "experimental": true,
+  "id": "e5749167-db9a-4f5c-a8f2-4406312b3fa5"
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns="http://hl7.org/fhir">
+<meta> 
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/> 
+</meta> 
+<text> 
+    
+    <status value="generated"/> 
+    <div xmlns="http://www.w3.org/1999/xhtml">
+        <p> Code System PPH Table Berzerkistan PPH Patient Tax Situation </p> 
+        <table class="grid">
+            <tr> 
+                <td> 
+                    <b> Code</b> 
+                </td> 
+                <td> 
+                    <b> Display</b> 
+                </td> 
+                <td> 
+                    <b> Definition</b> 
+                </td> 
+                </tr>
+                <tr> 
+                    <td>U</td> 
+                    <td>UNCOVERED</td> 
+                    <td>PATIENT PAYS 21%</td> </tr> 
+                <tr> 
+                    <td>V</td> 
+                    <td>VOLUNTARY</td> 
+                    <td>PATIENT PAYS 10.5%</td> </tr> 
+                <tr> 
+                    <td>M</td> 
+                    <td>MANDATED</td> 
+                    <td>PATIENT PAYS 0%</td> </tr> 
+            </table>
+    </div> 
+</text> 
+    <url value="http://fhir.hl7fundamentals.org/berzerkistan/CodeSystem/PatientTaxSituation"/>
+    <identifier>
+        <system value="http://fhir.hl7fundamentals.org/berzerkistan/identifiers/codesystems"/>
+        <value value="PatientTaxSituation"/>
+    </identifier>
+    <version value="20151120"/>
+    <name value="Berzerkistan PPH Tax Situation - 20151120"/>
+    <status value="draft"/>
+    <experimental value="true"/>
+    <publisher value="Berzerkistan Healthcare Ministry"/>
+    <contact>
+        <name value="Professor Allan Karim Von Mannenheim"/>
+        <telecom>
+            <system value="other"/>
+            <value value="http://bhm.org.bz/fhir"/>
+        </telecom>
+    </contact>
+    <description value="Berzerkistan PPH Tax Situation - 20151120"/>
+    
+<caseSensitive value="false"/> 
+<content value="complete"/> 
+        <concept>
+            <code value="U"/>
+            <display value="UNCOVERED"/>
+            <definition value="UNCOVERED - PATIENT PAYS 21% PPH TAX"/>
+        </concept>
+        <concept>
+            <code value="M"/>
+            <display value="MANDATED"/>
+            <definition value="MANDATED - PATIENT PAYS 0 PPH TAX"/>
+        </concept>
+        <concept>
+            <code value="V"/>
+            <display value="VOLUNTARY"/>
+            <definition value="VOLUNTARY - PATIENT PAYS 10.5% PPH TAX"/>
+        </concept>
+         
+</CodeSystem>

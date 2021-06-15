@@ -1,0 +1,36 @@
+<Device xmlns="http://hl7.org/fhir"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ >   
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml"> UW Device [YOUR PATIENT ID]
+        </div>
+    </text>
+    <identifier>
+        <system value="www.uwearme.com/dev"/>
+        <value value="[YOUR PATIENT ID]"/>
+        
+    </identifier>
+    
+    <expirationDate value="2020-10-10"></expirationDate> 
+    <lotNumber value="22222"></lotNumber>
+    <modelNumber value="u888800-1"></modelNumber> 
+    <type>
+        <coding>
+            <system value=" http://snomed.info/sct"/>
+            <code value="33894003"/>
+            <display value="Experimental Device"></display>
+        </coding>
+    </type>
+   
+    <patient>
+        <reference value="urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"/> 
+    </patient>
+    
+    <owner>
+        <reference value="urn:uuid:17C7D86E-664F-4FE2-91D7-AF9A8E47311E"/>
+           
+    </owner>
+   
+   </Device>
+

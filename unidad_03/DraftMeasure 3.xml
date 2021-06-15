@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by your engineer just before leaving the company
+        Left some good clues, though
+-->
+<Bundle xmlns="http://hl7.org/fhir"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <type value="transaction"> </type>
+    <entry>
+        <fullUrl value ="urn:uuid:17C7D86E-664F-4FE2-91D7-AF9A8E47311E"/>
+        <resource>
+            <Organization>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> UWEARME - A DIVISION OF HEALTH GIZMOS
+                        CORP </div>
+                </text>
+                <identifier>
+                    <system value="www.nationalorgidentifier.gov/ids"/>
+                    <value value="MYUWEARME"/>
+                </identifier>
+                <name value="MYUWEARME"/>
+                <address>
+                    <line value="2000 WEARABLE DRIVE"/>
+                    <city value="ANN ARBOR"/>
+                    <state value="MI"/>
+                    <country value="US"/>
+                </address>
+            </Organization>
+        </resource>
+        <request>
+            <method value="PUT"/>
+            <url value="Organization?identifier=www.nationalorgidentifier.gov/ids|MYUWEARME"/>
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"/>
+        <resource>
+            <Patient>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> 
+                        Juan Tapia Id # juan.tapia 
+                    </div>
+                </text>
+                <identifier>
+                    <system value="www.mypatientidentifier.com/ids"/>
+                    <value value="juan.tapia"/>
+                </identifier>
+                <name>
+                    <family value="Tapia"/>
+                    <given value="Juan"/>
+                </name>
+                <address>
+                    <line value="Hipolito Yrigoyen 2569"/>
+                    <city value="CABA"/>
+                    <state value="CABA"/>
+                    <country value="ARG"/>
+                </address>
+                <managingOrganization>
+                    <reference value="urn:uuid:17C7D86E-664F-4FE2-91D7-AF9A8E47311E"
+                    > </reference>
+                </managingOrganization>
+            </Patient>
+        </resource>
+        <request>
+            <method value="PUT"/>
+            <url value="Patient?identifier=www.mypatientidentifier.com/ids|juan.tapia"/>
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:01ba878a-e49d-4bac-b629-9de3fcb7e83a" />
+        <resource>
+            <!-- Device goes here -->
+            <Device xmlns="http://hl7.org/fhir"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            >
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> UW Device juan.tapia
+                    </div>
+                </text>
+                <identifier>
+                    <system value="www.uwearme.com/dev"/>
+                    <value value="juan.tapia"/>
+                </identifier>
+                <expirationDate value="2020-10-10"></expirationDate>
+                <lotNumber value="22222"></lotNumber>
+                <modelNumber value="u888800-1"></modelNumber>
+                <type>
+                    <coding>
+                        <system value=" http://snomed.info/sct"/>
+                        <code value="33894003"/>
+                        <display value="Experimental Device"></display>
+                    </coding>
+                </type>
+                <patient>
+                    <reference value="urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"/>
+                </patient>
+                <owner>
+                    <reference value="urn:uuid:17C7D86E-664F-4FE2-91D7-AF9A8E47311E"/>
+                </owner>
+            </Device>
+        </resource>
+        <request>
+            <method value="PUT"/>
+            <url value="Device?identifier=www.uwearme.com/dev|juan.tapia"/>
+        </request>
+    </entry>
+    <entry>
+        <resource>
+            <!-- 1ra Observation goes here -->
+            <Observation xmlns="http://hl7.org/fhir"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> UW Device for Pat # juan.tapia
+                        TA Sistolica: 120 mmHg on 2021-06-141T11:16:00Z
+                    </div>
+                </text>
+                <identifier>
+                    <system value="www.uwearme.com/measures"/>
+                    <value value="juan.tapia-2021-06-12T11:16:00Z-8480-6"/>
+                </identifier>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="8480-6"/>
+                        <display value="TA Sistolica"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"> </reference>
+                </subject>
+                <effectiveDateTime value="2021-06-12T11:16:00Z"/>
+                <valueQuantity>
+                    <value value="120"/>
+                    <unit value="mmHg"/>
+                </valueQuantity>
+                <device>
+                    <reference value="urn:uuid:01ba878a-e49d-4bac-b629-9de3fcb7e83a"> </reference>
+                </device>
+            </Observation>
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Observation"/>
+        </request>
+    </entry>
+    <!-- And more observations here: SYS BP, DIA BP, HEART RATE, RESP RATE -->
+    <entry>
+        <resource>
+            <!-- 2da Observation goes here -->
+            <Observation xmlns="http://hl7.org/fhir"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> UW Device for Pat # juan.tapia
+                        TA Diastolica: 80 mmHg on 2021-06-141T11:16:00Z
+                    </div>
+                </text>
+                <identifier>
+                    <system value="www.uwearme.com/measures"/>
+                    <value value="juan.tapia-2021-06-12T11:16:00Z-8462-4"/>
+                </identifier>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="8462-4"/>
+                        <display value="TA Diastolica"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"> </reference>
+                </subject>
+                <effectiveDateTime value="2021-06-12T11:16:00Z"/>
+                <valueQuantity>
+                    <value value="80"/>
+                    <unit value="mmHg"/>
+                </valueQuantity>
+                <device>
+                    <reference value="urn:uuid:01ba878a-e49d-4bac-b629-9de3fcb7e83a"> </reference>
+                </device>
+            </Observation>
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Observation"/>
+        </request>
+    </entry>
+    <entry>
+        <resource>
+            <!-- 3ra Observation goes here -->
+            <Observation xmlns="http://hl7.org/fhir"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> UW Device for Pat # juan.tapia
+                        Ritmo Cardiaco: 85 /min on 2021-06-141T11:16:00Z
+                    </div>
+                </text>
+                <identifier>
+                    <system value="www.uwearme.com/measures"/>
+                    <value value="juan.tapia-2021-06-12T11:16:00Z-8867-4"/>
+                </identifier>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="8867-4"/>
+                        <display value="Ritmo Cardiaco"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"> </reference>
+                </subject>
+                <effectiveDateTime value="2021-06-12T11:16:00Z"/>
+                <valueQuantity>
+                    <value value="85"/>
+                    <unit value="/min"/>
+                </valueQuantity>
+                <device>
+                    <reference value="urn:uuid:01ba878a-e49d-4bac-b629-9de3fcb7e83a"> </reference>
+                </device>
+            </Observation>
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Observation"/>
+        </request>
+    </entry>
+    <entry>
+        <resource>
+            <!-- 4ta Observation goes here -->
+            <Observation xmlns="http://hl7.org/fhir"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> UW Device for Pat # juan.tapia
+                        Ritmo respiratorio: 15 /min on 2021-06-141T11:16:00Z
+                    </div>
+                </text>
+                <identifier>
+                    <system value="www.uwearme.com/measures"/>
+                    <value value="juan.tapia-2021-06-12T11:16:00Z-9279-1"/>
+                </identifier>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="9279-1"/>
+                        <display value="Ritmo respiratorio"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"> </reference>
+                </subject>
+                <effectiveDateTime value="2021-06-12T11:16:00Z"/>
+                <valueQuantity>
+                    <value value="15"/>
+                    <unit value="/min"/>
+                </valueQuantity>
+                <device>
+                    <reference value="urn:uuid:01ba878a-e49d-4bac-b629-9de3fcb7e83a"> </reference>
+                </device>
+            </Observation>
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Observation"/>
+        </request>
+    </entry>
+</Bundle>
