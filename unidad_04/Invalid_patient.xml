@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patient xmlns="http://hl7.org/fhir">
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2021-05-31T16:23:51.603+00:00"/>
+    </meta>
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            Gender:male
+            BirthDate:1972-10-01
+            Given:Sebastian
+            Family:Mastropiero
+            BNI:123456
+            US-SSN:X123456
+            PPH Tax:Mandated
+            Telephone:+541149591591
+        </div>
+    </text>
+    <extension url="https://simplifier.net/MAIS-SOPORTEAFACTURA/PPHTaxSituation/~xml">
+        <valueCode value="X">
+        </valueCode>
+    </extension>
+    <identifier>
+        <system value="http://www.berzerkistan.gov/bni"/>
+        <value value="123456"/>
+    </identifier>
+    <identifier>
+        <system value="http://hl7.org/fhir/sid/us-ssn"/>
+        <value value="X123456"/>
+    </identifier>
+    <name>
+        <use value="official"/>
+        <family value="Mastropiero"/>
+        <given value="Johan"/>
+        <prefix value="MR"/>
+    </name>
+    <telecom>
+        <system value="phone"/>
+        <value value="+541149591591"/>
+        <use value="home"/>
+    </telecom>
+    <gender value="male"/>
+    <birthDate value="1972-10-01"/>
+    <deceasedBoolean value="false"/>
+    <address>
+        <line value="3300 Washtenaw"/>
+        <city value="Ann Harbor"/>
+        <district value="Washtenaw"/>
+        <state value="MI"/>
+        <postalCode value="48104"/>
+        <country value="US"/>
+    </address>
+</Patient>
